@@ -34,10 +34,10 @@ def datos():
         print( "%s" % (primero))
 
         if form.validate():
-            connection = sqlite3.connect("../notebooks/instituciones_educativas.db")
+            connection = sqlite3.connect("../notebooks/fuente2.db")
             connection.text_factory = str
             df = pd.read_sql_query("SELECT * from colegios", connection)
-            data = df[(df['Canton'].str.contains(primero))][['Canton','Parroquia','Nombre','Direccion', 'Total_Alumnos']]
+            data = df[(df['Canton'].str.contains(primero))][['URI_Name','Provincia','Canton','Parroquia', 'Tipo','EstudiantesFemenino','EstudiantesMasculino','Total_Alumnos']]
             tabla = data.to_html()
             data = data.to_dict(orient="records")
             numero = len(data)

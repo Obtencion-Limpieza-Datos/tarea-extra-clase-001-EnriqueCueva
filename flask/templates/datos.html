@@ -45,10 +45,14 @@
         {% endif %}    
         
         <tr>
+          <td>{{d['URI_Name']}}</td>
+          <td>{{d['Provincia']}}</td>
+          <td>{{d['Canton']}}</td>
           <td>{{d['Parroquia']}}</td>
-          <td>{{d['Nombre']}}</td>
-          <td>{{d['Direccion']}}</td>
-          <td>{{d['Total_Alumnos']}}</td>
+	  <td>{{d['Tipo']}}</td>
+          <td>{{d['EstudiantesFemenino']}}</td>
+          <td>{{d['EstudiantesMasculino']}}</td>
+	  <td>{{d['Total_Alumnos']}}</td>
         </tr>
 
         {% endfor %}
